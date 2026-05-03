@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Taxi Capsules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Taxi Capsules</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Book</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" onclick="checkAdminPassword()">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking-hero">
+            <div class="hero-content">
+                <span class="eyebrow">Quick Reservation</span>
+                <h2>Book your trip in a few seconds</h2>
+                <p>Order a Pop Up Capsule or flying car, enter your departure and destination, and let us handle the rest.</p>
+            </div>
+            <div class="hero-card">
+                <div class="hero-step">
+                    <strong>1.</strong>
+                    <p>Enter your information.</p>
+                </div>
+                <div class="hero-step">
+                    <strong>2.</strong>
+                    <p>Choose your vehicle.</p>
+                </div>
+                <div class="hero-step">
+                    <strong>3.</strong>
+                    <p>Receive your confirmation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form">
+            <div class="form-grid">
+                <form id="bookingForm" class="form">
+                    <p class="title">Reservation</p>
+                    <p class="message">Provide your information to book your trip.</p>
+
+                    <div class="flex">
+                        <label>
+                            <input class="input" type="text" id="firstname" name="firstname" required>
+                            <span>Firstname</span>
+                        </label>
+                        <label>
+                            <input class="input" type="text" id="lastname" name="lastname" required>
+                            <span>Lastname</span>
+                        </label>
+                    </div>
+
+                    <label>
+                        <input class="input" type="text" id="address" name="address" placeholder="Ex : Damrak 1, Amsterdam" required>
+                        <span>Departure address</span>
+                    </label>
+
+                    <label>
+                        <input class="input" type="text" id="destination" name="destination" placeholder="Ex : Museumplein, Amsterdam" required>
+                        <span>Arrival address</span>
+                    </label>
+
+                    <label>
+                        <select class="input" id="vehicle" name="vehicle" required>
+                            <option value="" disabled selected>Choose a vehicle</option>
+                            <option value="capsule">Pop Up Capsule</option>
+                            <option value="flying">Flying Car</option>
+                        </select>
+                        <span>Vehicle type</span>
+                    </label>
+
+                    <label>
+                        <input class="input" type="datetime-local" id="datetime" name="datetime" required>
+                        <span>Date and time</span>
+                    </label>
+
+                    <button class="submit" type="submit">Confirm reservation</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taxi Capsules. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

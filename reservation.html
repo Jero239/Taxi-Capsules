@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Taxi Capsules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Taxi Capsules</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" onclick="checkAdminPassword()">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="reservation-page">
+            <div class="reservation-card">
+                <h1>Booking</h1>
+                <p>Fill out this form to book your Taxi Capsules quickly and easily.</p>
+                <form id="bookingForm" class="reservation-form" action="#" method="post">
+                    <input type="hidden" name="bookingType" value="normal">
+                    <div class="field">
+                        <label for="firstname">First Name</label>
+                        <input class="input" type="text" id="firstname" name="firstname" placeholder="Your first name" required>
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Last Name</label>
+                        <input class="input" type="text" id="lastname" name="lastname" placeholder="Your last name" required>
+                    </div>
+                    <div class="field">
+                        <label for="departure">Departure Address</label>
+                        <input class="input" type="text" id="departure" name="departure" placeholder="Ex: Damrak 1, Amsterdam" required>
+                    </div>
+                    <div class="field">
+                        <label for="arrival">Arrival Address</label>
+                        <input class="input" type="text" id="arrival" name="arrival" placeholder="Ex: Museumplein, Amsterdam" required>
+                    </div>
+                    <div class="field">
+                        <label for="vehicle">Vehicle Type</label>
+                        <select class="input" id="vehicle" name="vehicle" required style="width: 613.22222px;">
+                            <option value="" disabled selected>Choose a type</option>
+                            <option value="aerien">Aerial</option>
+                            <option value="terrestre">Ground</option>
+                        </select>
+                    </div>
+                    <button class="submit-button" type="submit">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taxi Capsules. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

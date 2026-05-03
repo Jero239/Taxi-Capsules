@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Capsules - Future Urban Transport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Taxi Capsules</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Booking</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" onclick="checkAdminPassword()">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-modern">
+            <div class="hero-modern-content">
+                <h2>Experience the Future of Urban Transport</h2>
+                <p>Discover Amsterdam's most innovative mobility solution. Pop Up Capsules and autonomous flying cars – fast, eco-friendly, and always at your service.</p>
+                <a href="reservation.html" class="hero-modern-cta">Book Your Ride Now</a>
+                <button class="hero-modern-cta hours-btn" onclick="showHoursPopup()">View Possible Trips</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taxi Capsules. All rights reserved.</p>
+    </footer>
+
+    <div id="hours-popup" class="popup-overlay" onclick="hideHoursPopup()" style="display: none;">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="hideHoursPopup()">&times;</span>
+            <h3>Possible Trips from Amsterdam</h3>
+            <div class="trips-list">
+                <div class="trip-item" onclick="selectTrip('Rotterdam')">
+                    <strong>Rotterdam</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 30 minutes
+                </div>
+                <div class="trip-item" onclick="selectTrip('Utrecht')">
+                    <strong>Utrecht</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 25 minutes
+                </div>
+                <div class="trip-item" onclick="selectTrip('The Hague')">
+                    <strong>The Hague</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 45 minutes
+                </div>
+                <div class="trip-item" onclick="selectTrip('Haarlem')">
+                    <strong>Haarlem</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 20 minutes
+                </div>
+                <div class="trip-item" onclick="selectTrip('Leiden')">
+                    <strong>Leiden</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 35 minutes
+                </div>
+                <div class="trip-item" onclick="selectTrip('Almere')">
+                    <strong>Almere</strong><br>
+                    Departs every 1 hour<br>
+                    Travel time: 40 minutes
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
